@@ -6,7 +6,6 @@ import (
 	"github.com/JackMaarek/go-bot-utils/shared/enum"
 	"github.com/JackMaarek/go-bot-utils/shared/env"
 	"net/http"
-
 )
 
 func PerformRequest(route enum.Routes, method string, data interface{}) (*http.Response, error) {
