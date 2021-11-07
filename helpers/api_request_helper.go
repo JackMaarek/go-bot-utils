@@ -3,7 +3,6 @@ package helpers
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/JackMaarek/go-bot-utils/enum"
 	"github.com/JackMaarek/go-bot-utils/env"
 	log "github.com/sirupsen/logrus"
 	"io"
@@ -11,7 +10,7 @@ import (
 	"net/http"
 )
 
-func PerformRequest(route enum.Routes, method string, data interface{}) (*http.Response, error) {
+func PerformRequest(route string, method string, data interface{}) (*http.Response, error) {
 	client := &http.Client{}
 	baseUrl := env.GetVariable("DOMAIN_API_URL")
 	requestBody, err := json.Marshal(data)
