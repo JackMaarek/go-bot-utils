@@ -5,6 +5,9 @@ import (
 	"encoding/json"
 	"github.com/JackMaarek/go-bot-utils/enum"
 	"github.com/JackMaarek/go-bot-utils/env"
+	log "github.com/sirupsen/logrus"
+	"io"
+	"io/ioutil"
 	"net/http"
 )
 
@@ -26,4 +29,20 @@ func PerformRequest(route enum.Routes, method string, data interface{}) (*http.R
 	}
 
 	return response, err
+}
+
+
+func DeserializeResponseFromObject(data io.ReadCloser, object interface{}) error {
+	deserializedData, err := ioutil.ReadAll(data)
+	if err != nil {
+		log.Error("could ot read response for deserialization")
+		return err
+	}
+
+	err = json.Unmarshal(deserializedData, &object)
+	if err != nil {
+		log.Error("could not unmarshal response data to object")
+		return err
+	}
+	return nil
 }
