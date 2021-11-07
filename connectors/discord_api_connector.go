@@ -1,7 +1,7 @@
 package connectors
 
 import (
-	"github.com/JackMaarek/go-bot-utils/shared/env"
+	"github.com/JackMaarek/go-bot-utils/env"
 	"github.com/bwmarrin/discordgo"
 	log "github.com/sirupsen/logrus"
 )

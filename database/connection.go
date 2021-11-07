@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/JackMaarek/go-bot-utils/shared/env"
+	"github.com/JackMaarek/go-bot-utils/env"
 	"time"
 
 	log "github.com/sirupsen/logrus"

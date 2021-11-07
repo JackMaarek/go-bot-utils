@@ -3,8 +3,8 @@ package helpers
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/JackMaarek/go-bot-utils/shared/enum"
-	"github.com/JackMaarek/go-bot-utils/shared/env"
+	"github.com/JackMaarek/go-bot-utils/enum"
+	"github.com/JackMaarek/go-bot-utils/env"
 	"net/http"
 )
 
