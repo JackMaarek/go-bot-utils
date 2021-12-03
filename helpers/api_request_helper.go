@@ -30,7 +30,6 @@ func PerformRequest(route string, method string, data interface{}) (*http.Respon
 	return response, err
 }
 
-
 func DeserializeResponseFromObject(data io.ReadCloser, object interface{}) error {
 	deserializedData, err := ioutil.ReadAll(data)
 	if err != nil {
